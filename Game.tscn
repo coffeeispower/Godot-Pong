@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://KdamThmorPro-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Bar.png" type="Texture" id=2]
 [ext_resource path="res://Ball.gd" type="Script" id=3]
 [ext_resource path="res://Player.gd" type="Script" id=4]
+[ext_resource path="res://Player.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 96 )
@@ -35,6 +36,10 @@ texture = ExtResource( 2 )
 
 [node name="Player2" type="KinematicBody2D" parent="."]
 position = Vector2( 960, 320 )
+script = ExtResource( 5 )
+speed = 172
+ai = true
+ball_node = NodePath("../Ball")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
 shape = SubResource( 1 )

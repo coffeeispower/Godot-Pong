@@ -37,9 +37,11 @@ func check_scored():
 	if(position.x <= 0):
 		reset_pos()
 		incrementScorePlayer2()
+		set_random_direction()
 	if(position.x >= screen_width):
 		reset_pos()
 		incrementScorePlayer1()
+		set_random_direction()
 
 
 
@@ -47,8 +49,24 @@ onready var startPos = position;
 func reset_pos():
 	position = startPos;
 
+func set_random_direction():
+	var result = Vector2()
 
-func _process(delta):
+	var x = randi()%2;
+	if(x == 0):
+		result.x = -1;
+	if(x == 1):
+		result.x = 1;
+	
+	var y = randi()%2;
+	if(y == 0):
+		result.y = -1;
+	if(y == 1):
+		result.y = 1;
+	direction = result
+	
+
+func _process(_delta):
 	move_ball()
 	bounce_ball_if_colliding()
 	check_scored()
