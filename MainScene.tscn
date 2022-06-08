@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Bar.png" type="Texture" id=2]
+[ext_resource path="res://Ball.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 96 )
@@ -40,6 +41,8 @@ texture = ExtResource( 2 )
 
 [node name="Ball" type="KinematicBody2D" parent="."]
 position = Vector2( 512, 320 )
+script = ExtResource( 3 )
+speed = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
 shape = SubResource( 2 )
