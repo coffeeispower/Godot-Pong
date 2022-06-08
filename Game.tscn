@@ -47,6 +47,8 @@ texture = ExtResource( 2 )
 [node name="Ball" type="KinematicBody2D" parent="."]
 position = Vector2( 512, 320 )
 script = ExtResource( 3 )
+player1LabelPath = NodePath("../Player1Score")
+player2LabelPath = NodePath("../Player2Score")
 speed = 304
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
