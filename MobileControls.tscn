@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://arrow.png" type="Texture" id=1]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="UpButton" type="TouchScreenButton" parent="."]
+position = Vector2( 96, 456 )
+scale = Vector2( 0.25, 0.25 )
+normal = ExtResource( 1 )
+action = "pad_up"
+visibility_mode = 1
+
+[node name="DownButton" type="TouchScreenButton" parent="."]
+position = Vector2( 760, 576 )
+scale = Vector2( 0.25, -0.25 )
+normal = ExtResource( 1 )
+action = "pad_down"
+visibility_mode = 1

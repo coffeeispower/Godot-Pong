@@ -60,9 +60,9 @@ func set_random_direction():
 	
 	var y = randi()%2;
 	if(y == 0):
-		result.y = -1;
+		result.y = -0.3;
 	if(y == 1):
-		result.y = 1;
+		result.y = 0.3;
 	direction = result
 	
 
