@@ -52,7 +52,7 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
 }
-speed = 406
+speed = 290
 ai = true
 ball_node = NodePath("../Ball")
 

@@ -32,8 +32,9 @@ func incrementScorePlayer2():
 	scorePlayer2 += 1
 
 
-onready var screen_width = OS.window_size.x
+
 func check_scored():
+	var screen_width = OS.window_size.x
 	if(position.x <= 0):
 		reset_pos()
 		incrementScorePlayer2()
