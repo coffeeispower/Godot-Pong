@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://KdamThmorPro-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Bar.png" type="Texture" id=2]
@@ -12,6 +12,14 @@ extents = Vector2( 8, 96 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8, 8 )
+
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 1, 0.849609, 0, 1 )
+
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
+width = 12
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 512, 8 )
@@ -58,6 +66,7 @@ texture = ExtResource( 2 )
 
 [node name="Ball" type="KinematicBody2D" parent="."]
 position = Vector2( 512, 320 )
+z_index = 1
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
@@ -70,9 +79,10 @@ speed = 375
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
 shape = SubResource( 2 )
 
-[node name="Bar" type="Sprite" parent="Ball"]
-scale = Vector2( 1.33333, 0.106667 )
-texture = ExtResource( 2 )
+[node name="BallSpr" type="Sprite" parent="Ball"]
+position = Vector2( 0, -1.90735e-06 )
+scale = Vector2( 1.33333, 16 )
+texture = SubResource( 6 )
 
 [node name="UpBottonColliders" type="StaticBody2D" parent="."]
 position = Vector2( 8, 720 )
