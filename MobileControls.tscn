@@ -7,6 +7,7 @@
 [node name="UpButton" type="TouchScreenButton" parent="."]
 position = Vector2( 96, 456 )
 scale = Vector2( 0.25, 0.25 )
+z_index = 2
 normal = ExtResource( 1 )
 action = "pad_up"
 visibility_mode = 1
@@ -14,6 +15,7 @@ visibility_mode = 1
 [node name="DownButton" type="TouchScreenButton" parent="."]
 position = Vector2( 760, 576 )
 scale = Vector2( 0.25, -0.25 )
+z_index = 2
 normal = ExtResource( 1 )
 action = "pad_down"
 visibility_mode = 1
