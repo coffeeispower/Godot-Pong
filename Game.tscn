@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://KdamThmorPro-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Bar.png" type="Texture" id=2]
 [ext_resource path="res://Ball.gd" type="Script" id=3]
 [ext_resource path="res://MobileControls.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Line.png" type="Texture" id=5]
 [ext_resource path="res://Player.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -107,3 +108,8 @@ valign = 1
 uppercase = true
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 4 )]
+
+[node name="Line" type="Sprite" parent="."]
+position = Vector2( 512, 304 )
+scale = Vector2( 1.33333, 6.16667 )
+texture = ExtResource( 5 )
