@@ -4,7 +4,7 @@ export(bool) var ai = false;
 # Used needed when ai is ON
 export(NodePath) var ball_node
 onready var ball = get_node(ball_node) 
-func ai():
+func run_ai():
 	if(ball.position.y-$CollisionShape2D.shape.extents.y < position.y && randi()%10 < 6):
 			move("up")
 	else:
@@ -12,7 +12,7 @@ func ai():
 			move("down")
 func _process(delta):
 	if(ai):
-		ai()
+		run_ai()
 	else:
 		handle_input()
 func move(dir: String):
